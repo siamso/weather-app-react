@@ -1,5 +1,6 @@
+import Weather from "./components/weather/Weather";
 function App() {
-  return <></>;
+  return <Weather />;
 }
 
 export default App;
