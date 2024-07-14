@@ -54,18 +54,20 @@ function Weather() {
       {errorMessage ? (
         <p>{errorMessage}</p>
       ) : loading ? (
-        <p>Loading....</p>
+        <p className="text-center m-20 text-3xl">Loading....</p>
       ) : weatherData ? (
-        <div className="flex flex-col items-center justify-center bg-green-600 w-4/5 mt-5 rounded-lg">
+        <div className="flex flex-col items-center justify-center bg-green-600 text-white w-4/5 mt-5 rounded-lg p-10">
           <h1 className="text-3xl">
             {weatherData?.name},{weatherData?.sys?.country}
           </h1>
-          <p>{getDate()}</p>
+          <p className="m-5">{getDate()}</p>
           <div>
-            <p>Temp: {weatherData?.main?.temp}</p>
-            <p>{weatherData?.weather[0]?.main}</p>
+            <p className="text-2xl">Temp: {weatherData?.main?.temp}</p>
+            <p className="text-xl text-center">
+              {weatherData?.weather[0]?.main}
+            </p>
           </div>
-          <div>
+          <div className="flex gap-40 text-center">
             <div>
               <p>{weatherData?.wind?.speed}</p>
               <p>Wind Speed</p>
